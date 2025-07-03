@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的项目主页 - By Creeper32767</title>
+
+    <!-- Fluent UI Web Components -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@fluentui/web-components/dist/web-components.min.js"></script>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>我的前端工具集</h1>
+            <p>一些用爱构建的实用小工具</p>
+        </header>
+
+        <main>
+            <!-- Project Cards Section -->
+            <h2 class="section-title">我的项目</h2>
+            <div class="project-grid">
+                
+                <!-- Fluent Code Editor Card -->
+                <fluent-card>
+                    <div class="card-content">
+                        <div class="icon">
+                            <fluent-symbol-icon name="code-24-filled"></fluent-symbol-icon>
+                        </div>
+                        <h3>Fluent Code Editor</h3>
+                        <p>一个轻量级、支持语法高亮和主题切换的在线代码编辑器。</p>
+                    </div>
+                    <fluent-anchor href="./editor/index.html" appearance="accent">
+                        <fluent-button appearance="accent">打开编辑器</fluent-button>
+                    </fluent-anchor>
+                </fluent-card>
+
+                <!-- Professional Reader Card Generator Card -->
+                <fluent-card>
+                    <div class="card-content">
+                        <div class="icon">
+                            <fluent-symbol-icon name="document-text-24-filled"></fluent-symbol-icon>
+                        </div>
+                        <h3>专业读者卡片生成器</h3>
+                        <p>创建精美的阅读卡片，记录阅读精华，并导出为高清图片。</p>
+                    </div>
+                    <fluent-anchor href="./reader_card/index.html" appearance="accent">
+                        <fluent-button appearance="accent">进入生成器</fluent-button>
+                    </fluent-anchor>
+                </fluent-card>
+
+                <!-- Screenshot Generator Card -->
+                <fluent-card>
+                    <div class="card-content">
+                        <div class="icon">
+                            <fluent-symbol-icon name="camera-24-filled"></fluent-symbol-icon>
+                        </div>
+                        <h3>网页快照生成器</h3>
+                        <p>加载任意网页，与页面交互，然后捕获整个页面的高清截图。</p>
+                    </div>
+                    <fluent-anchor href="./screenshot/index.html" appearance="accent">
+                        <fluent-button appearance="accent">开始截图</fluent-button>
+                    </fluent-anchor>
+                </fluent-card>
+
+            </div>
+
+            <!-- Developer Section -->
+            <h2 class="section-title">关于开发者</h2>
+            <fluent-card class="developer-card">
+                <img src="https://avatars.githubusercontent.com/u/108502206?v=4" alt="Developer Avatar" class="developer-avatar">
+                <div class="developer-info">
+                    <h3>Creeper32767</h3>
+                    <p class="bio">"A high school student from China."</p>
+                    <div class="developer-links">
+                        <fluent-anchor href="https://github.com/Creeper32767" target="_blank" rel="noopener noreferrer">
+                            <fluent-button>
+                                <fluent-symbol-icon name="logo-github-24-regular" slot="start"></fluent-symbol-icon>
+                                GitHub Profile
+                            </fluent-button>
+                        </fluent-anchor>
+                        <fluent-anchor href="https://x.com/ConsoleCreeper" target="_blank" rel="noopener noreferrer">
+                            <fluent-button appearance="outline">
+                                <fluent-symbol-icon name="person-circle-24-regular" slot="start"></fluent-symbol-icon>
+                                Follow on X
+                            </fluent-button>
+                        </fluent-anchor>
+                    </div>
+                </div>
+            </fluent-card>
+
+        </main>
+
+        <footer>
+            <p>&copy; <span id="current-year">2025</span> - 本页面由 Fluent UI Web Components 构建</p>
+        </footer>
+
+    </div>
+    
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
