@@ -1,8 +1,8 @@
-## 📂 Project Structure
+# 📂 Project Structure
 
 The project is organized with a main homepage and separate directories for each tool, promoting modularity and easy maintenance.
-Use code with caution.
 
+```
 root/
 ├── index.html # Main homepage
 ├── style.css # Homepage styles
@@ -19,3 +19,4 @@ root/
 ├── index.html
 ├── style.css
 └── script.js
+```
