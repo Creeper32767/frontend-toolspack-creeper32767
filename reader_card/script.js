@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateCard() {
-        elements.displayQuote.textContent = elements.quoteTextarea.value || "æ­¤å¤æ¾ç¤ºææåå®¹...";
-        elements.displayName.textContent = elements.nameInput.value || "æå½è";
-        elements.cardTitleDisplay.textContent = elements.cardTitleInput.value || "å¡çæ é¢";
-        elements.displayBookTitle.textContent = elements.bookTitleInput.value || "ä¹¦ç±æ é¢";
-        elements.displayAuthor.textContent = elements.authorInput.value || "ä½èå§å";
+        elements.displayQuote.textContent = elements.quoteTextarea.value || "此处显示摘抄内容...";
+        elements.displayName.textContent = elements.nameInput.value || "摘录者";
+        elements.cardTitleDisplay.textContent = elements.cardTitleInput.value || "卡片标题";
+        elements.displayBookTitle.textContent = elements.bookTitleInput.value || "书籍标题";
+        elements.displayAuthor.textContent = elements.authorInput.value || "作者姓名";
         
         updateCardDate();
         
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function exportToPNG() {
         const card = document.getElementById('card');
-        elements.exportBtn.textContent = 'æ­£å¨çæå¾ç...';
+        elements.exportBtn.textContent = '正在生成图片...';
         elements.exportBtn.disabled = true;
         
         html2canvas(card, { scale: 4, backgroundColor: null, useCORS: true })
@@ -94,21 +94,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 elements.outputImage.src = canvas.toDataURL('image/png');
                 elements.outputContainer.style.display = 'block';
                 elements.downloadLink.href = elements.outputImage.src;
-                elements.downloadLink.download = `è¯»èå¡ç_${Date.now()}.png`;
+                elements.downloadLink.download = `读者卡片_${Date.now()}.png`;
             })
             .finally(() => {
-                elements.exportBtn.textContent = 'å¯¼åºä¸ºé«æ¸å¾ç';
+                elements.exportBtn.textContent = '导出为高清图片';
                 elements.exportBtn.disabled = false;
                 elements.outputContainer.scrollIntoView({ behavior: 'smooth' });
             });
     }
 
     function loadRandomExample() {
-        elements.cardTitleInput.value = "è´ææä¸çå¹³å¡çä½ ";
-        elements.nameInput.value = "ä¸ä½è¯»è";
-        elements.bookTitleInput.value = "æçæ¥å°±æ¯é«å±±";
-        elements.authorInput.value = "ä½å";
-        elements.quoteTextarea.value = "æçæ¥å°±æ¯é«å±±èéæºªæµï¼ææ¬²äºç¾¤å³°ä¹å·ä¿¯è§å¹³åº¸çæ²å£ï¼æçæ¥å°±æ¯äººæ°èéèè¥ï¼æç«å¨ä¼äººä¹è©ä¿¯è§åå¾®çæ¦å¤«ã";
+        elements.cardTitleInput.value = "致所有不甘平凡的你";
+        elements.nameInput.value = "一位读者";
+        elements.bookTitleInput.value = "我生来就是高山";
+        elements.authorInput.value = "佚名";
+        elements.quoteTextarea.value = "我生来就是高山而非溪流，我欲于群峰之巅俯视平庸的沟壑；我生来就是人杰而非草芥，我站在伟人之肩俯视卑微的懦夫。";
         elements.titleFont.value = "'Ma Shan Zheng', cursive";
         elements.textFont.value = "'Noto Serif SC', serif";
         elements.titleColor.value = "#3a1c71";
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const reader = new FileReader();
         reader.onload = e => {
-            const imgHtml = `<img src="${e.target.result}" alt="é¢è§">`;
+            const imgHtml = `<img src="${e.target.result}" alt="预览">`;
             elements.imagePreview.innerHTML = imgHtml;
             elements.imageContainer.innerHTML = imgHtml;
         };
