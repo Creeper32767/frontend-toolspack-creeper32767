@@ -1,6 +1,6 @@
 # Fluent Frontend Tools
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-brightgreen?style=for-the-badge)]([(https://creeper32767.github.io/frontend-toolspack-creeper32767/)])
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-brightgreen?style=for-the-badge)](https://creeper32767.github.io/frontend-toolspack-creeper32767/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
 
 A collection of useful, single-page web applications built with modern web technologies and a clean, Fluent UI-inspired design. This project aims to provide simple, powerful tools that run directly in your browser, with no backend required.
